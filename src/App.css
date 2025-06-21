@@ -1,80 +1,94 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  background-color: rebeccapurple;
-}
-.buttons{
-  margin: 0 20px 20px 20px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 20px;
-}
-.equalTo{
-  grid-column: span 2;
-  background-color: rgb(28, 133, 28);
-  color: white;
-}
-.ac{
-  background-color: red;
-  color: white;
 
+body {
+  background: linear-gradient(135deg, #3e1e68, #2e0346);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
 }
-.del{
-  background-color: chocolate;
-  color: white;
-}
-.buttons input{
-  cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 20px;
-  border: none;
-  padding: 10px;
-  transition: 0.4s ease-in;
-  &:hover{
-    background-color: rgb(151, 158, 165);
-    color: rgb(236, 228, 228);
-  }
 
-}
-.container{
+.container {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: max-content;
-  background-color: black;
-  border-radius: 15px;
+  background: #1c1c1c;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
-.textSection{
-  margin: 20px;
-  width: 90%;
-  background-color: rgb(36, 35, 35);
-  color: white;
+
+.textSection {
+  width: 100%;
+  background-color: #2e2e2e;
+  color: #fff;
   border: none;
   text-align: right;
-  padding: 10px;
-  font-size: 1.6rem;
-  border-radius: 5px;
-  height: 20%;
-  &:focus{
-    outline: none;
-  }
+  padding: 15px;
+  font-size: 2rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 80px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-@media(min-width:600px) and (max-width: 900px){
-  .container{
+.textSection:focus {
+  outline: none;
+}
+
+.buttons {
+    margin: 0 20px 20px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.buttons input {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: none;
+  padding: 15px 0;
+  background-color: #3a3a3a;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buttons input:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.equalTo {
+  grid-column: span 2;
+  background-color: #28a745 !important;
+}
+
+.ac {
+  background-color: #dc3545 !important;
+}
+
+.del {
+  background-color: #ff851b !important;
+}
+
+/* Responsive Styling */
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
     width: 70%;
-    height: 80%;
   }
-  .buttons{
-    margin-top: 5%;
+  .textSection {
+    font-size: 2.5rem;
   }
-  .textSection{
-    font-size: 3rem;
+  .buttons input {
+    font-size: 2rem;
   }
 }
+
 @media (max-width: 600px) {
   .container {
     top: 0;
