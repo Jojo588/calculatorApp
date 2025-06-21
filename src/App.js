@@ -31,15 +31,16 @@ function App() {
       setLastEval(false);
     }
   }
-
-  function handleEqual() {
-    try {
-      setInputText(eval(inputText).toString());
-      setLastEval(true);
-    } catch (error) {
-      alert('Invalid expression');
-    }
+function handleEqual() {
+  try {
+    // eslint-disable-next-line no-eval
+    setInputText(eval(inputText).toString());
+    setLastEval(true);
+  } catch (error) {
+    alert('Invalid expression');
   }
+}
+
 
   function handleDel() {
     setInputText(prevInputText => prevInputText.slice(0, -1));
