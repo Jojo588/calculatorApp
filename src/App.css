@@ -1,9 +1,3 @@
-html, body {
-  height: 100%;
-  overflow: hidden; /* optional: hides background scroll */
-}
-
-
 * {
   margin: 0;
   padding: 0;
@@ -113,19 +107,12 @@ body {
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) and (hover: none) and (pointer: coarse) {
-  body::before {
-    content: "Landscape Media Query Active";
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    background: #000;
-    color: #fff;
-    padding: 5px 10px;
-    z-index: 9999;
-    font-size: 14px;
-  }
 
-  .container {
+
+  body::before {
+    content: "MEDIA QUERY WORKS";
+
+  .container{
     position: fixed;
     top: 0;
     left: 0;
@@ -133,23 +120,14 @@ body {
     width: 100vw;
     height: 100vh;
     border-radius: 0;
-    padding: 20px;
-    overflow: hidden;
-  }
 
-  .textSection {
-    font-size: 2rem;
-    padding: 20px;
   }
-
-  .buttons {
-    margin-top: 5%;
+  .buttons{
     gap: 10px;
-    height: calc(100vh - 160px); /* Adjust as needed */
   }
-
-  .buttons input {
-    font-size: 1.2rem;
-    padding: 8px;
+  .buttons input{
+    font-size: 20px;
+    padding: 0;
   }
 }
+  }
