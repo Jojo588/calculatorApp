@@ -113,6 +113,18 @@ body {
   }
 }
 @media screen and (max-width: 767px) and (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  body::before {
+    content: "Landscape Media Query Active";
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    z-index: 9999;
+    font-size: 14px;
+  }
+
   .container {
     position: fixed;
     top: 0;
@@ -133,7 +145,7 @@ body {
   .buttons {
     margin-top: 5%;
     gap: 10px;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 160px); /* Adjust as needed */
   }
 
   .buttons input {
