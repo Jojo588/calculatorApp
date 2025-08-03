@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  overflow: hidden; /* optional: hides background scroll */
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -106,19 +112,32 @@ body {
     margin-top: 13%;
   }
 }
-@media (orientation: landscape) 
- {
-  .container{
+@media screen and (max-width: 767px) and (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
     width: 100vw;
     height: 100vh;
     border-radius: 0;
+    padding: 20px;
+    overflow: hidden;
+  }
 
+  .textSection {
+    font-size: 2rem;
+    padding: 20px;
   }
-  .buttons{
+
+  .buttons {
+    margin-top: 5%;
     gap: 10px;
+    height: calc(100vh - 160px);
   }
-  .buttons input{
-    font-size: 20px;
-    padding: 0;
+
+  .buttons input {
+    font-size: 1.2rem;
+    padding: 8px;
   }
 }
